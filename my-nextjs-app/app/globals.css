@@ -1,3 +1,27 @@
+/* styles/fonts.css */
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular.woff2') format('woff2'),
+    /* Replace with your font file path */
+    url('/fonts/OpenSans-Regular.woff') format('woff');
+  /* Ensure correct paths */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Bold.woff2') format('woff2'),
+    /* Replace with your font file path */
+    url('/fonts/OpenSans-Bold.woff') format('woff');
+  /* Ensure correct paths */
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* You can define other weights and styles of Open Sans similarly */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
