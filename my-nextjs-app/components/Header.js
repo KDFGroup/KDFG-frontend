@@ -1,19 +1,10 @@
-
-
 "use client";
-
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-} from "@headlessui/react";
+} from "@headlessui/react"; 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -70,11 +61,11 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              <div className="text-black flex gap-4 cursor-pointer items-center mb-3 lg:mb-0 ml-[260px] lg:ml-0">
+             {/*  <div className="text-black flex gap-4 cursor-pointer items-center mb-3 lg:mb-0 ml-[260px] lg:ml-0">
                 <FontAwesomeIcon icon={faTwitter} />
                 <FontAwesomeIcon icon={faInstagram} />
                 <FontAwesomeIcon icon={faFacebook} />
-              </div>
+              </div> */}
             </div>
           </div>
           <Disclosure.Panel className="sm:hidden">

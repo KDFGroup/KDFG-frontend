@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col  justify-between ">
       <div>
-       <Header />
+      <Header />
+       <h1>Home Page</h1>
       </div>
     </main>
   );
