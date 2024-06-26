@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import assets from "../assets/Group .png";
@@ -40,9 +41,9 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#ffffff] p-4 text-[#000000] shadow font-sans relative z-20">
+    <nav className="bg-[#ffffff] p-4 text-[#000000] shadow font-sans  z-20 fixed top-0 left-0 right-0">
       <ul className="flex justify-between items-center pl-8 pr-8 cursor-pointer">
-        <Link  to="/"className="flex justify-center items-center gap-1">
+        <Link to="/" className="flex justify-center items-center gap-1">
           <img className="" src={assets} alt="Logo" />
           <h1>KDFG</h1>
         </Link>
@@ -77,20 +78,20 @@ const NavBar = () => {
                     >
                       <FontAwesomeIcon icon={faXmark} />
                     </p>
-                    <li className="flex p-2 border rounded  w-[223px] justify-center items-center gap-1 ml-5">
-                    <img src={search} alt=""/>
-                      <input 
+                    <li className="flex p-2 border rounded w-[223px] justify-center items-center gap-1 ml-5">
+                      <img src={search} alt="Search" />
+                      <input
                         type="text"
-                        className=" border-none outline-none "
+                        className="border-none outline-none"
                         placeholder="Search"
                         onClick={(event) => event.stopPropagation()} // Stop the click event from propagating
                       />
                     </li>
-                    <li className="px-4 py-4 ">
+                    <li className="px-4 py-4">
                       <Link to="/">Community</Link>
                       <hr />
                     </li>
-                    <li className="px-4 py-4 ">
+                    <li className="px-4 py-4">
                       <Link to="/">Movies</Link>
                       <hr />
                     </li>
@@ -110,3 +111,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

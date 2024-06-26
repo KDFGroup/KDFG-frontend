@@ -2,7 +2,7 @@ import React from 'react'
 
 function Community() {
   return (
-    <div>Community</div>
+    <div className='mt-20'>Community</div>
   )
 }
 

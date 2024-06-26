@@ -2,7 +2,7 @@ import React from 'react'
 
 function EpisodeRecap() {
   return (
-    <div>EpisodeRecaps</div>
+    <div className='mt-20'>EpisodeRecaps</div>
   )
 }
 

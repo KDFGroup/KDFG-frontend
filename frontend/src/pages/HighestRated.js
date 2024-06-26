@@ -2,7 +2,7 @@ import React from 'react'
 
 function HighestRated() {
   return (
-    <div>HighestRated</div>
+    <div className='mt-20'>HighestRated</div>
   )
 }
 

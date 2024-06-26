@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#C4B1EE] p-1 text-[#000000] mt-auto font-sans w-[100vw]">
-      <div className="flex justify-between p-11">
+      <div className="md:flex md:justify-between p-11">
         <div className="grid gap-[10px] w-[292px] h-[176.6px] text-[#1A202C]">
           <div className="font-bold">KGFG</div>
           <div>Experience the best of K-dramas with fellow K-darama lovers</div>
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-[120px]  h-[176.6px] text-[#1A202C]">
+        <div className="flex lg:gap-[120px]  gap-4  md:h-[176.6px] text-[#1A202C]">
           <div className="gap-[10px] grid">
             <h1 className="font-semibold">Company</h1>
             <p>About us</p>
@@ -54,11 +54,11 @@ const Footer = () => {
         </div>
       </div>
       <hr className="bg-[#486284] h-[1px] border-none mx-10" />
-      <div className="flex justify-between p-11 text-[#className] font-light">
+      <div className=" md:flex justify-between p-11 text-[#className] font-light">
         <div className="flex gap-[120px]">
           <div>©{currentYear} KGFG. All rights reserved</div>
         </div>
-        <div className="flex gap-[50px]">
+        <div className=" grid md:flex  gap-3 md:gap-[50px] pt-3">
           <div>
             <p>Privacy & Policy</p>
           </div>
