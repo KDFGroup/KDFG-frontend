@@ -9,7 +9,7 @@ function Home() {
     <div>
       <Crousel />
 
-      {/* trending now and highest reated components goes into this div with hi text */}
+      {/* trending now and highest reated components goes into this div with hello */}
       <div className=''>
         <h1 className='text-[120px]'> Hello</h1>
       </div>
