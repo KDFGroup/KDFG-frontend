@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import assets from "../assets/Group .png";
@@ -41,74 +39,79 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#ffffff] p-4 text-[#000000] shadow font-sans  z-20 fixed top-0 left-0 right-0">
-      <ul className="flex justify-between items-center pl-8 pr-8 cursor-pointer">
-        <Link to="/" className="flex justify-center items-center gap-1">
-          <img className="" src={assets} alt="Logo" />
-          <h1>KDFG</h1>
-        </Link>
+
+    <nav className="bg-white p-4 text-black shadow fixed top-0 left-0 right-0 z-20">
+    <div className="container mx-auto flex justify-between items-center">
+      <Link to="/" className="flex items-center gap-2">
+        <img src={assets} alt="Logo" className="h-8" />
+        <h1 className="font-bold">KDFG</h1>
+      </Link>
+      <ul className="flex gap-6 items-center">
         <li>
-          <Link to="/Trendingnow">Trending Now</Link>
+          <Link to="/Trendingnow">
+            Trending Now
+          </Link>
         </li>
         <li>
-          <Link to="/HighestRated">Highest Rated</Link>
+          <Link to="/HighestRated">
+            Highest Rated
+          </Link>
         </li>
         <li>
-          <Link to="/Community">Community</Link>
+          <Link to="/Community">
+            Community
+          </Link>
         </li>
         <li>
-          <Link to="/EpisodeRecaps">Episode Recaps</Link>
+          <Link to="/EpisodeRecaps">
+            Episode Recaps
+          </Link>
         </li>
         <li>
-          <Link to="/AboutUs">About Us</Link>
+          <Link to="/AboutUs">
+            About Us
+          </Link>
         </li>
-        <div className="flex justify-between gap-4 items-center">
-          <FontAwesomeIcon icon={faFacebook} />
-          <FontAwesomeIcon icon={faInstagram} />
-          <FontAwesomeIcon icon={faTwitter} />
-          <div onClick={toggleDropdown} ref={dropdownRef} className="relative">
-            <FontAwesomeIcon icon={faBars} />
-            {dropdownOpen && (
-              <div className="fixed inset-0 z-10">
-                <div className="absolute right-0 w-[272px] h-[320px] bg-white rounded-md shadow-lg z-20 mt-[60px] mr-4 grid">
-                  <ul className="py-1">
-                    <p
-                      onClick={toggleDropdown}
-                      className="cursor-pointer flex justify-end p-4"
-                    >
-                      <FontAwesomeIcon icon={faXmark} />
-                    </p>
-                    <li className="flex p-2 border rounded w-[223px] justify-center items-center gap-1 ml-5">
-                      <img src={search} alt="Search" />
-                      <input
-                        type="text"
-                        className="border-none outline-none"
-                        placeholder="Search"
-                        onClick={(event) => event.stopPropagation()} // Stop the click event from propagating
-                      />
-                    </li>
-                    <li className="px-4 py-4">
-                      <Link to="/">Community</Link>
-                      <hr />
-                    </li>
-                    <li className="px-4 py-4">
-                      <Link to="/">Movies</Link>
-                      <hr />
-                    </li>
-                    <li className="px-4 py-4">
-                      <Link to="/">Account</Link>
-                      <hr />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
       </ul>
-    </nav>
-  );
+      <div className="relative flex items-center gap-4">
+        <div className="flex items-center p-2 border rounded w-[223px]">
+          <img src={search} alt="Search" className="h-4" />
+          <input
+            type="text"
+            className="border-none outline-none ml-2 w-full"
+            placeholder="Search"
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+        <div onClick={toggleDropdown} ref={dropdownRef} className="relative">
+          <button className="flex items-center bg-[#7F56DA] px-4 py-2 rounded-4px gap-2">
+            Get Started
+          </button>
+          {dropdownOpen && (
+            <div className="fixed inset-0 z-10">
+              <div className="absolute right-0 mt-2 w-[272px] bg-white rounded-md shadow-lg z-20">
+                <ul className="py-2">
+                  <p
+                    onClick={toggleDropdown}
+                    className="cursor-pointer flex justify-end p-2"
+                  >
+                    <FontAwesomeIcon icon={faXmark} />
+                  </p>
+                  <li className="px-4 py-2  ">
+                    <Link to="/">Sign In</Link>
+                  </li>
+                  <li className="px-4 py-2  ">
+                    <Link to="/">Sign Up</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </nav>
+);
 };
 
 export default NavBar;
-

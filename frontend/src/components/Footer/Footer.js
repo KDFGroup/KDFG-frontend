@@ -10,7 +10,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#C4B1EE] p-1 text-[#000000] mt-auto font-sans w-[100vw]">
+    <footer className=" p-1 text-[#000000] mt-auto font-sans w-[100vw]">
       <div className="md:flex md:justify-between p-11">
         <div className="grid gap-[10px] w-[292px] h-[176.6px] text-[#1A202C]">
           <div className="font-bold">KGFG</div>
