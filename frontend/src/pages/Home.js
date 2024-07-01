@@ -2,7 +2,9 @@ import React from 'react'
 import Crousel from '../components/Carousel/Carousel'
 import Image from '../components/assets/image 3.png'
 import arrow from '../components/assets/arrow.png'
-
+import HighestRated from '../components/HighestRated/HighestRated'
+import highestRatedTitles from '../components/HighestRated/titles'
+import EpisodeRecaps from '../components/EpisodeRecaps/EpisodeRecaps'
 
 function Home() {
   return (
@@ -10,8 +12,8 @@ function Home() {
     <Crousel />
 
     {/* trending now and highest reated components goes into this div with hi text */}
-    <div className=''>
-    <h1 className='text-[120px]'> hi text</h1>
+    <div className='m-2 px-10 py-4'>
+      <HighestRated titles={highestRatedTitles} />
     </div>
 
     <div className=' md:flex justify-between bg-[#CBD5F0] font-sans  md:p-0'>
@@ -26,6 +28,9 @@ function Home() {
       <div className='md:h-[460px] md:w-[800px] flex justify-end '>
         <img className='' src={Image} alt=''/>
       </div>
+    </div>
+    <div className='m-2 p-10'>
+      <EpisodeRecaps/>
     </div>
     </div>
   )
