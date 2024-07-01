@@ -9,7 +9,8 @@ import EpisodeRecaps from '../components/EpisodeRecaps/EpisodeRecaps'
 function Home() {
   return (
     <div>
-    <Crousel />
+      <Crousel />
+
 
     {/* trending now and highest reated components goes into this div with hi text */}
     <div className='m-2 px-10 py-4'>
@@ -33,6 +34,7 @@ function Home() {
       <EpisodeRecaps/>
     </div>
     </div>
+
   )
 }
 
