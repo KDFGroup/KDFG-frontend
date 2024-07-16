@@ -11,6 +11,7 @@ import AboutUs from './pages/AboutUs';
 import HighestRated from './pages/HighestRated';
 import Home from './pages/Home';
 import './index.css';
+import EmailVerification from './pages/EmailVerification';
 
 function App() {
   return (
