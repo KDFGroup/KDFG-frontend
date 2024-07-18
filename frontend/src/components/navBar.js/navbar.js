@@ -195,9 +195,11 @@ const NavBar = () => {
                     />
                   </div>
                   <div className="grid justify-center items-center h-[130px]">
+                  <Link to="/logIn">
                     <button className="w-[220px] h-[38px] border rounded-md hover:bg-[#DCE3F5]">
                       Sign In
                     </button>
+                    </Link>
                     <button className="w-[220px] h-[38px] border rounded-md hover:bg-[#DCE3F5]">
                       Sign Up
                     </button>
