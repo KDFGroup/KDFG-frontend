@@ -3,17 +3,19 @@ import roomImg1 from "../components/assets/CommunityPage/Frame 32.png";
 import roomImg2 from "../components/assets/CommunityPage/Frame 33.png";
 import roomImg3 from "../components/assets/CommunityPage/Frame 34.png";
 import roomImg4 from "../components/assets/CommunityPage/Frame 35.png";
-import CommunityHeroImg from "../components/assets/CommunityPage/image 23.png"
+import communityHeroImg from "../components/assets/CommunityPage/image 23.png";
 
 function Community() {
   return (
     <div className="mt-20 max-w-7xl mx-auto space-y-12 py-12">
       <header className="my-20">
-        <h2 className="text-black font-bold text-[40px] leading-10">Community Page</h2>
+        <h2 className="text-black font-bold text-[40px] leading-10">
+          Community Page
+        </h2>
       </header>
 
       <figure className="h-[510px] bg-purple-400">
-        <img src={CommunityHeroImg} alt="" />
+        <img src={communityHeroImg} alt="" className="size-full object-cover" />
       </figure>
 
       <section className="flex flex-col divide-y divide-black/20">
