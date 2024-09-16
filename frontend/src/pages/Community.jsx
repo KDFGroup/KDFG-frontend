@@ -1,13 +1,16 @@
 import React from "react";
+import CommunityHeroImg from "../components/assets/CommunityPage/image 23.png"
 
 function Community() {
   return (
     <div className="mt-20 max-w-7xl mx-auto space-y-12 py-12">
-      <header className="my-20">
-        <h2 className="text-black font-bold text-[40px] leading-10">Community Page</h2>
+      <header className="">
+        <h2 className="my-12 text-black font-bold text-[40px] leading-10">Community Page</h2>
       </header>
 
-      <figure className="h-[510px] bg-purple-400"></figure>
+      <figure className="h-[510px] bg-purple-400">
+        <img src={CommunityHeroImg} alt="" />
+      </figure>
 
       <section className="flex flex-col divide-y divide-black/20">
         {[1, 2, 3, 4].map((item) => (
