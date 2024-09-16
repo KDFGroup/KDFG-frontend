@@ -9,15 +9,15 @@
 
 // tailwind.config.js
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  plugins: [
-    require('tailwindcss-filters'),
-  ],
-
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#7F56DA",
+      },
+    },
   },
-  plugins: [],
-}
+  
+  plugins: [require("tailwindcss-filters")],
+};

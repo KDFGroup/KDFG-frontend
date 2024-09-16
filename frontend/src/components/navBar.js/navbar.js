@@ -177,7 +177,7 @@ const NavBar = () => {
           </div>
           <div onClick={toggleDropdown} ref={dropdownRef} className="relative">
             <div className="flex gap-16">
-              <button className="border w-[148px] h-[48px] rounded-md text-white bg-[#7F56DA]">
+              <button className="border w-[148px] h-[48px] rounded-md text-white bg-primary">
                 Get Started
               </button>
             </div>
