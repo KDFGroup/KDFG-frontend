@@ -76,7 +76,7 @@ const SignIn = () => {
         </p>
         <button
           onClick={handleSubmit}
-          className="bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-14"
+          className="bg-purple-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-14"
         >
           Create Account
         </button>

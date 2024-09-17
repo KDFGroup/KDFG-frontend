@@ -64,7 +64,7 @@ const LogIn = () => {
         </p>
         <button
           onClick={handleSubmit}
-          className="bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-16"
+          className="bg-purple-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-16"
         >
           Login
         </button>
@@ -77,7 +77,7 @@ const LogIn = () => {
           Sign in with Google
         </button>
         <p className="font-normal text-gray-500 mt-6 text-center">
-          Don't have an account?
+          Don't have an account?{" "}
           <span
             className="text-purple-500 font-semibold hover:bg-purple-700"
             onClick={handleSignIn}

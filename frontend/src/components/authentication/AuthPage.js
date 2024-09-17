@@ -2,6 +2,7 @@ import React from "react"
 import SignIn from "./SignIn"
 import AuthBanner from "./AuthBanner"
 import LogIn from "./LogIn"
+import EmailVerification from "./EmailVerification"
 
 const AuthPage = () => {
   return (
@@ -14,7 +15,8 @@ const AuthPage = () => {
       {/* Right Section */}
       <div className="w-[40%] flex items-center justify-center bg-white p-8">
         {/* <SignIn /> */}
-        <LogIn />
+        {/* <LogIn /> */}
+        <EmailVerification />
       </div>
     </div>
   )
