@@ -1,16 +1,15 @@
-
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Import Navigate
-import NavBar from './components/navBar.js/navbar';  
-import Footer from './components/Footer/Footer';
-import TrendingNow from './pages/Trendingnow';
-import Community from './pages/Community';
-import EpisodeRecap from './pages/EpisodeRecaps';
-import AboutUs from './pages/AboutUs';
-import HighestRated from './pages/HighestRated';
-import Home from './pages/Home';
-import './index.css';
+import React from "react"
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom" // Import Navigate
+import NavBar from "./components/navBar.js/navbar"
+import Footer from "./components/Footer/Footer"
+import TrendingNow from "./pages/Trendingnow"
+import Community from "./pages/Community"
+import EpisodeRecap from "./pages/EpisodeRecaps"
+import AboutUs from "./pages/AboutUs"
+import HighestRated from "./pages/HighestRated"
+import Home from "./pages/Home"
+import "./index.css"
+import Login from "./components/logIn/login"
 
 function App() {
   return (
@@ -28,12 +27,13 @@ function App() {
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/Community" element={<Community />} />
             <Route path="/HighestRated" element={<HighestRated />} />
+            <Route path="/Auth" element={<Login />} />
           </Routes>
         </div>
         <Footer />
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
