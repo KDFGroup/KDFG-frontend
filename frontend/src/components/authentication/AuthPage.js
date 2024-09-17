@@ -4,9 +4,11 @@ import AuthBanner from "./AuthBanner"
 
 const AuthPage = () => {
   return (
-    <div className="relative flex w-full min-h-screen">
+    <div className="relative flex w-full h-full min-h-screen">
       {/* Left Section */}
-      <AuthBanner />
+      <div className="flex w-[60%] flex-grow relative">
+        <AuthBanner />
+      </div>
 
       {/* Right Section */}
       <div className="w-[40%] flex items-center justify-center bg-white p-8">

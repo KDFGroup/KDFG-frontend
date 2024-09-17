@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGoogle } from "@fortawesome/free-brands-svg-icons"
+import logo from "../assets/Group .png"
 
 const SignIn = () => {
   const navigate = useNavigate()
@@ -35,7 +37,7 @@ const SignIn = () => {
     <div className="w-max flex items-center justify-center bg-white p-8">
       <div className="w-[430px] h-[752px] flex flex-col ">
         <div className="flex justify-flex-start mb-8">
-          <img src="/logo.svg" alt="K Logo" className="w-12 h-12" />
+          <img src={logo} alt="K Logo" className="w-12 h-12" />
         </div>
         <h2 className="text-3xl font-semibold mb-2">Sign Up</h2>
         <p className="mb-6 text-gray-500">To get started</p>
