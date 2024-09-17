@@ -1,11 +1,9 @@
 import React, { useState } from "react"
-import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGoogle } from "@fortawesome/free-brands-svg-icons"
 import logo from "../assets/Group .png"
 
-const SignIn = () => {
-  const navigate = useNavigate()
+const SignIn = ({ nextPage }) => {
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -26,11 +24,13 @@ const SignIn = () => {
     setUsername("")
     setEmail("")
     setPassword("")
-    navigate("/Home") // or email verification
+    // navigate("/Home") -not yet as we need the email verification
+    nextPage("emailVerification")
   }
 
   const handleLogIn = () => {
-    // navigate/render LogIn Page
+    //render LogIn Page
+    nextPage("logIn") // this is the setPage callback from AuthPage
   }
 
   return (
@@ -39,8 +39,8 @@ const SignIn = () => {
         <div className="flex justify-flex-start mb-8">
           <img src={logo} alt="K Logo" className="w-12 h-12" />
         </div>
-        <h2 className="text-3xl font-semibold mb-2">Sign Up</h2>
-        <p className="mb-8 text-gray-500">To get started</p>
+        <h2 className="text-5xl font-semibold mb-4">Sign Up</h2>
+        <p className="mb-8 text-gray-500 text-lg">To get started</p>
         <p className="mb-1 font-semibold text-lg">Username*</p>
         <input
           type="text"
@@ -76,7 +76,7 @@ const SignIn = () => {
         </p>
         <button
           onClick={handleSubmit}
-          className="bg-purple-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-14"
+          className="bg-purple-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-10"
         >
           Create Account
         </button>

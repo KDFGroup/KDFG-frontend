@@ -27,6 +27,7 @@ const EmailVerification = () => {
 
   const handleResendCode = () => {
     // resendCode API
+    //should we add a rendered div that code has been sent again?
   }
 
   return (
@@ -35,10 +36,10 @@ const EmailVerification = () => {
         <div className="flex justify-flex-start mb-8">
           <img src={logo} alt="K Logo" className="w-12 h-12" />
         </div>
-        <h2 className="text-3xl font-semibold mb-8">Verify your e-mail</h2>
+        <h2 className="text-4xl font-semibold mb-8">Verify your e-mail</h2>
         {!isVerified ? (
           <div className="flex flex-col justify-center">
-            <p className="mb-10 text-center text-gray-500">
+            <p className="mb-10 text-center text-gray-500 text-lg">
               Please check your mail and enter the 6 digit code that was sent to{" "}
               <span className="font-medium">abcd@gmail.com</span> below.
             </p>
@@ -68,10 +69,10 @@ const EmailVerification = () => {
               </span>
             </p>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center  mt-10">
               <button
                 onClick={handleVerify}
-                className="bg-purple-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-14"
+                className="bg-purple-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px]"
               >
                 Verify
               </button>
@@ -79,7 +80,7 @@ const EmailVerification = () => {
           </div>
         ) : (
           <div className="flex flex-col justify-center">
-            <p className="mb-10 text-center text-gray-500 text-xl">
+            <p className="mb-10 text-center text-gray-500 text-2xl">
               Your e-mail verification was successful. This will enable you:
             </p>
             <ul className="text-left">

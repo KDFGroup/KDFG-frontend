@@ -115,10 +115,12 @@ import { faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons"
 import octicon from "../assets/octicon.png"
 import assets from "../assets/Group .png"
+import { useNavigate } from "react-router-dom"
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
+  const navigate = useNavigate()
 
   const toggleDropdown = (event) => {
     event.stopPropagation()
@@ -146,6 +148,10 @@ const NavBar = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const handleAuthNavigation = (pageString) => {
+    navigate("/Auth", { state: { pageString } })
+  }
+
   return (
     <nav className="bg-[#ffffff] h-[80px] grid p-4 text-[#000000] shadow font-sans z-20 fixed top-0 left-0 right-0">
       <div className="flex justify-between items-center md:pl-8 md:pr-8 cursor-pointer">
@@ -158,7 +164,6 @@ const NavBar = () => {
           <Link to="/Community">Community</Link>
           <Link to="/EpisodeRecaps">Episode Recaps</Link>
           <Link to="/AboutUs">About Us</Link>
-          <Link to="/Auth">Auth</Link>
         </div>
         <div className="hidden lg:flex items-center gap-5">
           <div>
@@ -187,13 +192,17 @@ const NavBar = () => {
                     />
                   </div>
                   <div className="grid justify-center items-center h-[130px]">
-                    <Link to="/logIn">
-                      <button className="w-[220px] h-[38px] border rounded-md hover:bg-[#DCE3F5]">
-                        Sign In
-                      </button>
-                    </Link>
-                    <button className="w-[220px] h-[38px] border rounded-md hover:bg-[#DCE3F5]">
-                      Sign Up
+                    <button
+                      className="w-[220px] h-[38px] border rounded-md hover:bg-[#DCE3F5]"
+                      onClick={() => handleAuthNavigation("logIn")}
+                    >
+                      Login
+                    </button>
+                    <button
+                      className="w-[220px] h-[38px] border rounded-md hover:bg-[#DCE3F5]"
+                      onClick={() => handleAuthNavigation("signIn")}
+                    >
+                      Sign In
                     </button>
                   </div>
                 </div>
