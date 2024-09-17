@@ -4,15 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGoogle } from "@fortawesome/free-brands-svg-icons"
 import logo from "../assets/Group .png"
 
-const SignIn = () => {
+const LogIn = () => {
   const navigate = useNavigate()
-  const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
   const handleSubmit = () => {
     const userData = {
-      username: username,
       email: email,
       password: password,
     }
@@ -23,13 +21,12 @@ const SignIn = () => {
     // if response is successful
     // add response data to local State -- how do we store the local state?
     // clear form
-    setUsername("")
     setEmail("")
     setPassword("")
     navigate("/Home") // or email verification
   }
 
-  const handleLogIn = () => {
+  const handleSignIn = () => {
     // navigate/render LogIn Page
   }
 
@@ -39,18 +36,9 @@ const SignIn = () => {
         <div className="flex justify-flex-start mb-8">
           <img src={logo} alt="K Logo" className="w-12 h-12" />
         </div>
-        <h2 className="text-3xl font-semibold mb-2">Sign Up</h2>
-        <p className="mb-8 text-gray-500">To get started</p>
-        <p className="mb-1 font-semibold text-lg">Username*</p>
-        <input
-          type="text"
-          value={username}
-          placeholder="Enter your username"
-          className="w-[430px] h-[52px] border rounded font-light border-color:#ABABB5 p-2 mb-3"
-          onChange={(e) => {
-            setUsername(e.target.value)
-          }}
-        />
+        <h2 className="text-3xl font-semibold mb-2">Login</h2>
+        <p className="mb-8 text-gray-500">Welcome back!</p>
+
         <p className="mb-1 font-semibold text-lg">Email*</p>
         <input
           type="text"
@@ -71,14 +59,14 @@ const SignIn = () => {
             setPassword(e.target.value)
           }}
         />
-        <p className="mb-4 text-16 text-gray-500 font-light text-base">
+        <p className="mb-1 text-16 text-gray-500 font-light text-base mb-3">
           Must be at least 8 characters
         </p>
         <button
           onClick={handleSubmit}
-          className="bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-14"
+          className="bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-700 focus:outline-none w-[430px] h-[52px] mt-16"
         >
-          Create Account
+          Login
         </button>
 
         <button
@@ -86,12 +74,15 @@ const SignIn = () => {
           className="py-2 px-6 border rounded-md border-color:#ABABB5 w-[430px] h-[52px] mt-1 font-semibold hover:bg-purple-700 "
         >
           <FontAwesomeIcon icon={faGoogle} className="mr-2" />
-          Sign up with Google
+          Sign in with Google
         </button>
         <p className="font-normal text-gray-500 mt-6 text-center">
-          Already have an account?{" "}
-          <span className="text-purple-500 font-semibold hover:bg-purple-700" onClick={handleLogIn}>
-            Log in
+          Don't have an account?
+          <span
+            className="text-purple-500 font-semibold hover:bg-purple-700"
+            onClick={handleSignIn}
+          >
+            Sign in
           </span>
         </p>
       </div>
@@ -99,4 +90,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default LogIn

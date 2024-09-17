@@ -1,6 +1,7 @@
 import React from "react"
 import SignIn from "./SignIn"
 import AuthBanner from "./AuthBanner"
+import LogIn from "./LogIn"
 
 const AuthPage = () => {
   return (
@@ -12,7 +13,8 @@ const AuthPage = () => {
 
       {/* Right Section */}
       <div className="w-[40%] flex items-center justify-center bg-white p-8">
-        <SignIn />
+        {/* <SignIn /> */}
+        <LogIn />
       </div>
     </div>
   )
